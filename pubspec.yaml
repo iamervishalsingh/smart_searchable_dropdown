@@ -1,5 +1,5 @@
 name: smart_searchable_dropdown
-description: "A new Flutter package project."
+description: "A highly customizable dropdown widget for Flutter that supports searching, single-select, and multi-select options."
 version: 0.0.1
 homepage: 'https://github.com/iamervishalsingh/smart_searchable_dropdown'
 
