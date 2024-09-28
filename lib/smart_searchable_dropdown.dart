@@ -111,7 +111,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
         newDataList = mainDataListGroup;
       }
       _menuController = AnimationController(
-        duration:   Duration(milliseconds: 300),
+        duration:   const Duration(milliseconds: 300),
         vsync: this,
       );
     });
@@ -131,7 +131,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                   child:ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: widget.backgroundColor ?? Theme.of(context).colorScheme.surface,
-                      padding: widget.padding ?? EdgeInsets.all(10),
+                      padding: widget.padding ?? const EdgeInsets.all(10),
                       elevation: 0, // Remove shadow/bottom line
                       shadowColor: Colors.transparent, // Remove shadow color
                       shape: RoundedRectangleBorder( // Apply border radius correctly
@@ -166,12 +166,12 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                         : null,
                     child: Row(
                       children: [
-                        widget.prefixIcon ?? SizedBox(),
+                        widget.prefixIcon ?? const SizedBox(),
                         Expanded(
                           child: _buildSelectedDisplay(), // Build display based on bools
                         ),
                         widget.suffixIcon ??
-                            Icon(
+                            const Icon(
                               Icons.arrow_drop_down,
                               color: Colors.black,
                             ),
@@ -250,7 +250,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
       barrierDismissible: true,
       builder: (context) {
         return Padding(
-          padding: widget.menuPadding ?? EdgeInsets.all(10),
+          padding: widget.menuPadding ?? const EdgeInsets.all(10),
           child: StatefulBuilder(
             builder: (context, setState) {
               return Dialog(
@@ -260,7 +260,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                 child: Container(
                   color: widget.dropdownBackgroundColor ?? Colors.white,
                   child: Padding(
-                    padding: widget.menuPadding ?? EdgeInsets.all(10),
+                    padding: widget.menuPadding ?? const EdgeInsets.all(10),
                     child: Column(
                       mainAxisSize: MainAxisSize.min, // Fit content size
                       children: [
@@ -272,7 +272,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               TextButton(
-                                child: Text('Select All'),
+                                child: const Text('Select All'),
                                 onPressed: () {
                                   setState(() {
                                     selectedValues = List.from(newDataList);
@@ -280,7 +280,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                                 },
                               ),
                               TextButton(
-                                child: Text('Clear All'),
+                                child: const Text('Clear All'),
                                 onPressed: () {
                                   setState(() {
                                     selectedValues.clear();
@@ -300,7 +300,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             TextButton(
-                              child: Text('Close'),
+                              child: const Text('Close'),
                               onPressed: () {
                                 Navigator.pop(context);
                               },
@@ -308,7 +308,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                             Visibility(
                               visible: widget.multiSelect ?? false,
                               child: TextButton(
-                                child: Text('Done'),
+                                child: const Text('Done'),
                                 onPressed: () {
                                   setState((){
 
@@ -355,7 +355,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
               decoration: InputDecoration(
                 fillColor: Colors.white,
                 filled: true,
-                contentPadding: widget.contentPadding?? EdgeInsets.all(10),
+                contentPadding: widget.contentPadding?? const EdgeInsets.all(10),
                 suffixIcon: Icon(Icons.search, color: widget.primaryColor),
                 hintText: widget.dropdownHintText ?? 'Search here...',
                 border: OutlineInputBorder( // Defines the default border
@@ -394,7 +394,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
 
   Widget mainScreen(setState) {
     return Padding(
-      padding: widget.menuPadding ?? EdgeInsets.all(0),
+      padding: widget.menuPadding ?? const EdgeInsets.all(0),
       child: Material(
         elevation: 2.0,
         borderRadius: BorderRadius.circular(12),
@@ -406,7 +406,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
             Visibility(
               visible: (widget.showLabelInMenu ?? false) && widget.label != null,
               child: Padding(
-                padding:   EdgeInsets.all(8.0),
+                padding:   const EdgeInsets.all(8.0),
                 child: Text(
                   widget.label.toString(),
                   style: widget.labelStyle ??
@@ -424,7 +424,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
               child: Row(
                 children: [
                   TextButton(
-                    child: Text('Select All'),
+                    child: const Text('Select All'),
                     onPressed: () {
                       setState(() {
                         selectedValues = List.from(newDataList);
@@ -432,7 +432,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                     },
                   ),
                   TextButton(
-                    child: Text('Clear All'),
+                    child: const Text('Clear All'),
                     onPressed: () {
                       setState(() {
                         selectedValues.clear();
