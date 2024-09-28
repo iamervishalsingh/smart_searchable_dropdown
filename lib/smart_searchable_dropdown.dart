@@ -6,48 +6,48 @@ import 'package:flutter/material.dart';
 
 
 class SmartSearchableDropdown extends StatefulWidget {
-  List items = [];
-  String keyValue; // The key to display in the dropdown list
-  List? initialValue;
-  double? elementHeight; // Single variable for height
-  Color? primaryColor;
-  Color? backgroundColor;
-  Color? dropdownBackgroundColor;
-  EdgeInsetsGeometry? padding;
-  EdgeInsetsGeometry? menuPadding;
-  EdgeInsetsGeometry? contentPadding;
-  String? label;
-  String? dropdownHintText;
-  TextStyle? labelStyle;
-  TextStyle? dropdownItemStyle;
-  String? hint = '';
-  String? multiSelectTag;
-  int? initialIndex;
-  Widget? prefixIcon;
-  Widget? suffixIcon;
-  bool? hideSearch;
-  bool? enabled;
-  bool? showClearButton;
-  bool? menuMode;
-  double? menuHeight;
-  bool? multiSelect;
-  bool? multiSelectValuesAsWidget;
-  bool? showLabelInMenu;
-  bool? showSelectedCount; // Show selected count
-  bool? showSelectedList; // Show selected list
-  String? itemOnDialogueBox;
-  Decoration? decoration;
-  final TextAlign? labelAlign;
-  final ValueChanged onChanged;
-  double? borderRadius;
-  Color? borderColor;
-  double? borderWidth;
+ final List items  ;
+ final String keyValue; // The key to display in the dropdown list
+ final List? initialValue;
+ final double? elementHeight; // Single variable for height
+ final Color? primaryColor;
+ final Color? backgroundColor;
+ final Color? dropdownBackgroundColor;
+ final EdgeInsetsGeometry? padding;
+ final EdgeInsetsGeometry? menuPadding;
+ final EdgeInsetsGeometry? contentPadding;
+ final String? label;
+ final String? dropdownHintText;
+ final TextStyle? labelStyle;
+ final TextStyle? dropdownItemStyle;
+ final String? hint ;
+ final String? multiSelectTag;
+ final int? initialIndex;
+ final Widget? prefixIcon;
+ final Widget? suffixIcon;
+ final bool? hideSearch;
+ final bool? enabled;
+ final bool? showClearButton;
+ final bool? menuMode;
+ final double? menuHeight;
+ final bool? multiSelect;
+ final bool? multiSelectValuesAsWidget;
+ final bool? showLabelInMenu;
+ final bool? showSelectedCount; // Show selected count
+ final bool? showSelectedList; // Show selected list
+ final String? itemOnDialogueBox;
+ final Decoration? decoration;
+ final   TextAlign? labelAlign;
+ final   ValueChanged onChanged;
+ final double? borderRadius;
+ final Color? borderColor;
+ final double? borderWidth;
 
   SmartSearchableDropdown({
     required this.items,
     required this.keyValue, // The key in the items to show in the dropdown list
     required this.onChanged,
-    this.hint,
+    this.hint = '',
     this.initialValue,
     this.labelAlign,
     this.elementHeight, // Single variable for height
