@@ -4,7 +4,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-/// A Calculator.
 
 class SmartSearchableDropdown extends StatefulWidget {
   List items = [];
