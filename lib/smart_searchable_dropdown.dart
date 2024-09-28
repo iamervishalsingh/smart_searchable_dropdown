@@ -537,7 +537,6 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                 });
               }else{
 
-                print('Selected Value: ' +item.toString());
                 if (!selectedValues.contains(item)) {
                   setState(() {
                     selectedValues.add(item);
