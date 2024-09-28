@@ -111,7 +111,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
         newDataList = mainDataListGroup;
       }
       _menuController = AnimationController(
-        duration: const Duration(milliseconds: 300),
+        duration:   Duration(milliseconds: 300),
         vsync: this,
       );
     });
@@ -406,7 +406,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
             Visibility(
               visible: (widget.showLabelInMenu ?? false) && widget.label != null,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:   EdgeInsets.all(8.0),
                 child: Text(
                   widget.label.toString(),
                   style: widget.labelStyle ??
@@ -518,7 +518,7 @@ class _SmartSearchableDropdownState extends State<SmartSearchableDropdown>
                 : null,
             title: Text(item.toString(), // Display the value from the map using widget.keyValue
               style: widget.dropdownItemStyle ??
-                  Theme.of(context).textTheme.bodyText1,
+                  Theme.of(context).textTheme.bodyLarge,
             ),
             onTap: () {
               if(!(widget.multiSelect??false)){
